@@ -1,0 +1,15 @@
+name: Deploy latest Docker container image to ECS Service
+description: Apply updated container images to an ECS service
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+inputs:
+  environment_configuration:
+    description: 'JSON object containing the target AWS Account ID and ECS Cluster Name for each branch. E.g. "{\"master\": {\"awsAccountId\": \"1234567890\", \"clusterName\": \"myCluster\"}}"'
+    required: true
+  service_name:
+    description: Name of the target service
+    required: true
+  expected_image_digest:
+    description: The container image digest that should be running in the ECS service after the deployment has completed. Omit this argument to skip the Docker image digest check
+    required: false
