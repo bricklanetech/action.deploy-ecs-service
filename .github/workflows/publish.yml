@@ -16,7 +16,7 @@ jobs:
           fetch-depth: 0
 
       - name: Bump version and create new SemVer tag
-        uses: ./
+        uses: propertylift/action.bump-version-and-tag@v2
         with:
           prefix: 'v'
 
