@@ -27,7 +27,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
       - name: Deploy to ECS
-        uses: propertylift/action.deploy-ecs-service@master
+        uses: bricklanetech/action.deploy-ecs-service@master
         with:
           environment_configuration: '{"master": {"awsAccountId": ${{secrets.ECS_AWS_ACCOUNT_ID}}, "clusterName": "my-ecs-cluster", "service_name": "my-ecs-service"}}'
           expected_image_digest: f0af17449a83681de22db7ce16672f16f37131bec0022371d4ace5d1854301e0
