@@ -1,3 +1,7 @@
 local-test.sh
 .DS_Store
 .venv
+
+.memsearch/
+
+.devcontainer
